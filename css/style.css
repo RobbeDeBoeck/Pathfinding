@@ -1,0 +1,99 @@
+:root {
+    --start: green;
+    --goal: red;
+    --visited: lightblue;
+    --path: orange;
+    --obstacle: darkgray;
+}
+
+.grid-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#grid {
+    background-color: black;
+    display: grid;
+    gap: 5px;
+    padding: 5px;
+    overflow-x: auto;
+}
+
+.grid-cell {
+    background-color: white;
+    position: relative;
+}
+
+.visited {
+    background-color: var(--visited);
+}
+
+.path {
+    background-color: var(--path);
+}
+
+.obstacle {
+    background-color: var(--obstacle);
+}
+
+.start {
+    background-color: var(--start);
+}
+
+.goal {
+    background-color: var(--goal);
+}
+
+#grid .start,
+#grid .goal {
+    cursor: move;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.info-container div {
+    margin: 0 0.5rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.info-container div span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    margin-right: 0.5rem;
+}
+
+.info-container div label {
+    display: inline-block;
+    overflow: hidden;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    margin-right: 0.5rem;
+}
+
+.info-container div label input[type="color"] {
+    visibility: hidden;
+}
+
+form {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+form input {
+    margin: 0 auto;
+}

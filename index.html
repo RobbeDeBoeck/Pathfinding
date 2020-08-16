@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinding</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="info-container">
+        <div>
+            <label class="start">
+                <input type="color" name="start" value="#008000">
+            </label>
+            Starting position
+        </div>
+        <div>
+            <label class="goal">
+                <input type="color" name="goal" value="#FF0000">
+            </label>
+            Goal position
+        </div>
+        <div>
+            <label class="obstacle">
+                <input type="color" name="obstacle" value="#A9A9A9">
+            </label>
+            Obstacle
+        </div>
+        <div>
+            <label class="visited">
+                <input type="color" name="visited" value="#ADD8E6">
+            </label>
+            Visited cell
+        </div>
+        <div>
+            <label class="path">
+                <input type="color" name="path" value="#FFA500">
+            </label>
+            Path
+        </div>
+    </div>
+    <form>
+        <input type="number" value="20" name="width">
+        x
+        <input type="number" value="20" name="height">
+        <select name="algorithm">
+            <option value="a*" selected>A*</option>
+            <option value="dijkstra">Dijkstra</option>
+            <option value="bfs">Breadth first</option>
+            <option value="dfs">Depth first</option>
+        </select>
+        <button name="search">Search</button>
+        <button name="clear">Full clear</button>
+        <button name="softClear">Soft clear</button>
+    </form>
+    <div class="grid-wrapper">
+        <div id="grid"></div>
+    </div>
+    <script type="module" src="js/main.js" defer></script>
+</body>
+
+</html>
